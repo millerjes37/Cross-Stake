@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Add Horse</h2>
+<form method="POST">
+    <label for="name">Horse Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="trainer">Trainer:</label>
+    <input type="text" id="trainer" name="trainer" required>
+
+    <label for="year_born">Year Born:</label>
+    <input type="number" id="year_born" name="year_born" required>
+
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" required>
+        <option value="Filly">Filly</option>
+        <option value="Colt">Colt</option>
+    </select>
+
+    <label for="gait">Gait:</label>
+    <select id="gait" name="gait" required>
+        <option value="Trotting">Trotting</option>
+        <option value="Pacing">Pacing</option>
+    </select>
+
+    <label for="selected_stakes">Selected Stakes:</label>
+    <input type="text" id="selected_stakes" name="selected_stakes">
+
+    <button type="submit">Add Horse</button>
+</form>
+{% endblock %}
